@@ -1,7 +1,7 @@
 import { identifierModuleUrl } from '@angular/compiler';
 import { Component,Input,Output, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormControl,ReactiveFormsModule } from '@angular/forms';
-import { User } from 'src/app/user';
+import { User } from '../../user';
 
 @Component({
   selector: 'app-user-form',
