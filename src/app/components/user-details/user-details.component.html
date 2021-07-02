@@ -1,0 +1,30 @@
+<form *ngIf="user">
+    <div>
+        <div class="content">
+            <div>
+               {{ user.name | titlecase }}
+            </div>
+            <div>
+                {{user.phone}}
+            </div>
+            <div>
+                 {{user.address.street |titlecase}} {{user.address.suite|titlecase}}, {{user.address.city |titlecase}}
+            </div>
+            <div>
+                {{user.email}}
+            </div>
+        </div>
+        <button (click)="editUser()"
+            mat-raised-button
+            matTooltip="edit"
+            matTooltipPosition="below" >
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button (click)="deleteUser(user)"
+            mat-raised-button
+            matTooltip="delete"
+            matTooltipPosition="below" >
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
+</form>

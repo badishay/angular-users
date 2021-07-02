@@ -1,0 +1,50 @@
+
+.content{
+  color: white;
+  font-size: 3ex;
+  padding: 10px;
+}
+.content label{
+  color: black;
+  font-size:medium;
+}
+button{
+    cursor: pointer;
+    right: 0;
+   bottom: 0;
+   margin: 5px;
+   padding: 6px;
+   border-radius: 2px; 
+   position:relative;
+   background-color: silver;
+   
+}
+button:hover{
+    background-color: white;
+}
+.cancel{
+    color:red;
+    border: 1.5px solid red;
+}
+.save{
+    color: green;
+    border: 1.5px solid green;
+}
+input{
+    background-color: silver;
+    width: 100%;
+    max-width: 20rem;
+    padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+    
+}
+input:invalid {
+    border: 2px  red;
+  }
+ 
+  input:valid {
+    border: 2px solid black;
+  }

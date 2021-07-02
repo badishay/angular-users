@@ -1,0 +1,110 @@
+
+<!-- ****************EDIT USER************ -->
+<form class="content"  *ngIf="user" [formGroup]="userForm"  (ngSubmit)="onSubmit()">
+    <div>
+        <label for="name">name </label>
+        <div>
+            <input id="name"  formControlName="name" [ngModel]="user.name" required placeholder="name">
+        </div>
+    </div>
+    <div>
+        <label for="email">email </label>
+        <div>
+            <input id="email" formControlName="email" type="email" [ngModel]="user.email" required  placeholder="email">
+        </div>
+    </div>
+    <div formGroupName="address">
+        <div>
+            <label for="street">street </label>
+            <div>
+                <input id="street" formControlName="street" [ngModel]="user.address.street" required placeholder="street name">
+            </div>
+        </div>
+        <div>
+            <label for="suite">house number </label>
+            <div>
+                <input id="suite" formControlName="suite" [ngModel]="user.address.suite" required placeholder="house number">
+            </div>
+        </div>
+        <div>
+            <label for="city">city </label>
+            <div>
+                <input id="city" formControlName="city" [ngModel]="user.address.city" required placeholder="city">
+            </div>
+        </div>
+    </div>
+    <div>
+        <label for="phone">phone </label>
+        <div>
+            <input id="phone" formControlName="phone" type="tel" [ngModel]="user.phone" required placeholder="phone">
+        </div>
+    </div>
+    <button class="save" type="submit"
+        mat-raised-button
+        matTooltip="save changes"
+        matTooltipPosition="below">
+        <mat-icon>save</mat-icon>
+    </button>
+    <button class="cancel" type="button" (click)="cancelEdit()"
+        mat-raised-button
+        matTooltip="cancel"
+        matTooltipPosition="below">
+        <mat-icon>cancel</mat-icon>
+    </button>
+  </form>
+
+  <!-- *********NEW USER************* -->
+<form class="content" *ngIf="!user" [formGroup]="userForm"  (ngSubmit)="onSubmit()">
+    <div>
+        <label for="name">name </label>
+        <div>
+            <input id="name" formControlName="name" required placeholder="name">
+        </div>
+    </div>
+    
+    <div>
+        <label for="email">email </label>
+        <div>
+            <input id="email" formControlName="email" type="email" required  placeholder="email">
+        </div>
+    </div>
+    <div formGroupName="address">
+        <div>
+            <label for="street">street </label>
+            <div>
+                <input id="street" formControlName="street" required placeholder="street name">
+            </div>
+        </div>
+        <div>
+            <label for="suite">house number </label>
+            <div>
+                <input id="suite" formControlName="suite"  required placeholder="house number">
+            </div>
+        </div>
+        <div>
+            <label for="city" required>city </label>
+            <div>
+                <input id="city" formControlName="city" required placeholder="city">
+            </div>
+        </div>
+    </div>
+    <div>
+        <label for="phone">phone </label>
+        <div>
+            <input id="phone" formControlName="phone" required type="tel" placeholder="phone">
+        </div>
+    </div>
+    <button type="submit" class="save"
+        mat-raised-button
+        matTooltip="save"
+        matTooltipPosition="below"> <mat-icon>save</mat-icon>
+    </button>
+    <button type="button" class="cancel" (click)="cancelEdit()" 
+        mat-raised-button
+        matTooltip="cancel"
+        matTooltipPosition="below" >
+        <mat-icon>cancel</mat-icon>
+    </button>
+  </form>
+
+  

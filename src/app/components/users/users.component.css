@@ -1,0 +1,69 @@
+/* usersComponent's private CSS styles */
+.users {
+    background-color: #EEE;
+    width: 30%;
+    min-width: max-content;
+  }
+  .users li {
+    list-style-type: none;
+    cursor: pointer;
+    background-color: #EEE;
+    padding: 10px ;
+    text-align: center;
+    font-weight:400;
+    font-size: large;
+    border-bottom: 0.5px solid silver;  
+  }
+  .users li:hover {
+    color: #2c3a41;
+    background-color:silver;
+    /* left: .2em; */
+  }
+  .users li.selected {
+    background-color: gray;
+    color: white;
+    
+  }
+
+  .users li.selected:active {
+    background-color: black;
+    color: white;
+  }
+  
+  input {
+    padding: .5rem;
+  }
+  
+  .flex-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  .flex-container-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content:stretch;
+    margin-top: 0;
+    padding-left: 0;
+    
+  }
+  
+  .user-details{
+    background-color: gray;
+    width: 70%;
+    min-width: max-content;
+    height:auto;
+    overflow: auto;
+
+  }
+  .users button{
+   right: 0;
+   bottom: 0;
+   cursor: pointer;
+   margin: 5px;
+   border: 1.5px solid navy;
+   border-radius: 2px ;
+   color: navy;
+  }
+
+  

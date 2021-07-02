@@ -1,0 +1,26 @@
+<div class="flex-container">
+    <div class="users">
+        <ul class="flex-container-vertical">
+            <li *ngFor="let user of users"
+            [class.selected] = "user === selectedUser"
+                (click)="onSelect(user)">
+                <span>{{ user.name |titlecase }}</span>
+            </li>
+        </ul>
+        <button (click)="addNewUserForm()" 
+        mat-raised-button
+        matTooltip="Add new user"
+        matTooltipPosition="after">
+        <mat-icon>person_add</mat-icon></button> 
+    </div>
+    <div class="user-details">
+        <app-user-details  *ngIf="details" (newItemEvent)="editUser()" (deleteUserEvent)="deleteUser($event)"  [user]="selectedUser"></app-user-details>
+        <app-user-form *ngIf="edit" (newItemEvent)="updateUser($event)" (cancelEditEvent)="cancelEdit()" [user]="selectedUser"></app-user-form>
+        <app-user-form *ngIf="newUser" (newItemEvent)="updateUser($event)" (cancelEditEvent)="cancelEdit()"></app-user-form>
+    </div>
+    
+
+</div>
+
+
+
