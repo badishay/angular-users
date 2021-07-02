@@ -1,7 +1,7 @@
 import { AfterViewInit, OnDestroy, SimpleChanges } from '@angular/core';
 import { Component, Input, OnInit ,OnChanges } from '@angular/core';
-import { User } from 'src/app/user';
-import { UserService } from 'src/app/services/user.service';
+import { User } from '../../user';
+import { UserService } from '../../services/user.service';
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
